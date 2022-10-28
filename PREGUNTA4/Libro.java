@@ -68,6 +68,21 @@ public class Libro {
 
 
     public Capitulo[] buscarCapitulo(String nombre) {
-        return capitulo;
+        int i;
+        int band = 0;
+
+        System.out.println("BUSCAR");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("BUSCAR: Capitulo Num."); int busqueda = sc.nextInt();
+        for(int i=1,i<contadorCapitulo+1;i++){
+            if (i==busqueda)
+                band=1;
+        }
+        if (band == 1)
+            System.out.println("CAP ENCONTRADO: Capitulo "+ busqueda);
+        else
+            System.out.println("NO SE ENCONTRO: Capitulo "+ busqueda);
     }
 }
